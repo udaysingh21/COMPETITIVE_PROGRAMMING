@@ -32,7 +32,7 @@ def kthgrammar2(n,k):
     if n==1: return 0
 
     mid=2**(n-2) # observation
-    if k<=mid: # first half
+    if k<=mid: # k lies in first half, so need to change k
         return kthgrammar2(n-1,k) # same level with same k
     else:  # k lies in second half, in 2nd half values are negated of first half so we subtract result from 1 to get negation
         return 1-kthgrammar2(n-1,k-mid) # k is in second half so we subtract mid from k make it relative
