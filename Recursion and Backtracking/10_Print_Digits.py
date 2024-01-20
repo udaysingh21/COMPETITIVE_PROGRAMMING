@@ -1,5 +1,4 @@
 def printdigits(n):
-
     if n==0: # base case
         print(0,end=' ')
 
