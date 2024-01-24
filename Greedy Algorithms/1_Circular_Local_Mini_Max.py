@@ -38,7 +38,9 @@ if __name__=="__main__":
             result=circular(n,array,ans)
             if result=="YES":
                 print("YES")
-                print(ans)
+                for i in ans:
+                    print(i,end=' ')
+                print(' ')
             else:
                 print("NO")
 
