@@ -6,17 +6,19 @@ def circular(n,arr,ans):
 
     j,k=0,mid
     for i in range(n):
-        if i%2==0:
+        if i%2==0: # even 0,2,4...
             ans[i]=arr[j]
             j+=1
-        else:
+        else: # odd 1,3,5...
             ans[i]=arr[k]
             k+=1
 
 
     for i in range(1,n-1):
+        # strictly greater
         if ans[i-1]<ans[i] and ans[i]>ans[i+1]:
             continue
+        # strictly smaller
         elif ans[i-1]>ans[i] and ans[i]<ans[i+1]:
             continue
         else:
